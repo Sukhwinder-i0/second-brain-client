@@ -30,7 +30,7 @@ export const Button = (props: ButtonProps) => {
         ${variantStyles[props.variant]} 
         ${defaultStyles} 
         ${sizeSyles[props.size]} 
-        inline-flex items-center gap-2
+        inline-flex items-center gap-2 cursor-pointer
     `} >
         {props.startIcon && <span >{props.startIcon}</span>}
         {props.text}
