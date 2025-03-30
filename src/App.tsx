@@ -14,15 +14,13 @@ const App: Component = () => {
 
   const [modalOpen, setModalOpen] = createSignal<boolean>(true)
 
-  const togglePopup = () => {
-    setModalOpen((prev) => !prev);
-  }
-
+  const togglePopup = () => setModalOpen((prev) => !prev)
+  
+  //console.log(togglePopup())
   return (
 
   <>    
-  <AddContentPop open={modalOpen()} onClose={togglePopup}/>
-    
+  <AddContentPop isOpen={modalOpen()} onClose={togglePopup} />
 
     <div class='pt-5 pl-2'>
       <Button 
@@ -38,6 +36,7 @@ const App: Component = () => {
         startIcon={<FiPlus />}
         onClick={togglePopup}
       />
+
       <Button 
         variant='secondary'
         size='lg'

@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const variantStyles = {
-    primary: "bg-purple text-light-purple",
+    primary: "bg-purple text-white",
     secondary: "bg-light-purple text-purple"
 }
 
@@ -31,7 +31,9 @@ export const Button = (props: ButtonProps) => {
         ${defaultStyles} 
         ${sizeSyles[props.size]} 
         inline-flex items-center gap-2 cursor-pointer
-    `} >
+    `} 
+    onClick={props.onClick}
+    >
         {props.startIcon && <span >{props.startIcon}</span>}
         {props.text}
         {props.endIcon && <span >{props.endIcon}</span>}
