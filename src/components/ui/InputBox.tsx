@@ -1,7 +1,7 @@
 interface InputProps {
   placeholder: string,
   type:string, 
-  label: string
+  label?: string
 }
 
 const InputBox = (props: InputProps) => {
