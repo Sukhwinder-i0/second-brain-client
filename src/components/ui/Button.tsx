@@ -8,6 +8,7 @@ interface ButtonProps {
     startIcon?: JSXElement
     endIcon?: JSXElement
     onClick?: () => void
+    onClose?:  () => void
     class?: string
 }
 

@@ -3,30 +3,55 @@ import { BiRegularWindowClose } from "solid-icons/bi";
 import { ImExit } from "solid-icons/im";
 import InputBox from "./ui/InputBox.jsx";
 import { Button } from "./ui/Button.jsx";
+import { createSignal } from "solid-js";
 
-interface AddContentPopProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { isModalOpen, togglePopup } from "../actions/togglePopup.jsx"
 
-const AddContentPop = (props: AddContentPopProps) => {
-    
+// interface AddContentPopProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+// }
+
+const AddContentPop = () => {
+   
+  const [url, setUrl] = createSignal<HTMLInputElement>()
+
+  const handleSubmit = () => {
+    console.log(url())
+  }
+
   return (
     <>
-      {props.isOpen && <div class="w-full h-screen flex justify-center items-center bg-gray-600 opacity-95 fixed" >
+      {isModalOpen() && <div class="w-full h-screen flex justify-center items-center bg-gray-600 opacity-95 fixed" >
         <div class="w-1/5 bg-ghost-white rounded-md shadow-lg shadow-black">
            <div class="w-full px-3 pt-4 pb-2 font-bold text-xl flex items-center justify-between shadow-gray-500">
                 <p class="text-gray-700">Add Content</p>
-                <span class="text-red-700 text-2xl cursor-pointer" onClick={props.onClose}>
+                <span class="text-red-700 text-2xl cursor-pointer" onClick={togglePopup}>
                     {<BiRegularWindowClose />}
                 </span>
            </div>
            <div class="px-4">
-           <InputBox type="text" placeholder="title" label="Title" />
-           <InputBox type="text" placeholder="link" label="Url" />
-           <InputBox type="text" placeholder="description" label="Description" />
+           <InputBox 
+              type="text" 
+              placeholder="title" 
+              label="Title" 
+           />
+           <InputBox 
+              type="text" 
+              placeholder="link" 
+              label="Url" 
+              onInput={setUrl}
+           />
            <span class="py-4 flex w-full justify-center">
-                <Button variant="primary" text="Submit" size="md"/>
+                <Button 
+                  variant="primary" 
+                  text="Submit" 
+                  size="md"
+                  onClick={ () => {
+                    handleSubmit();
+                    togglePopup()
+                  }}
+                />
             </span>
         </div>
         </div>

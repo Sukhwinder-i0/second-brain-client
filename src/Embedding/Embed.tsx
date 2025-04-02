@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import { getPlateform } from "../utils/GetPlateform.jsx";
+import { getPlateform } from "./GetPlateform.jsx";
 
 interface Iframe {
   width: string;
@@ -21,8 +21,8 @@ const UniversalEmbed = () => {
       case "twitter":
         return (
           <blockquote class="twitter-tweet">
-            <a href="https://x.com/elonmusk/status/1905399600506101923">tweet</a>
-          </blockquote>
+                <a href="https://twitter.com/sama/status/1906210479695126886?ref_src=twsrc%5Etfw"></a>
+            </blockquote>
         );
       case "youtube":
         return (
@@ -36,16 +36,9 @@ const UniversalEmbed = () => {
         );
       case "reddit":
         return (
-        //   <iframe
-        //     src={`${url()}/embed`}
-        //     width="600"
-        //     height="400"
-        //     style={{ border: "none" }}
-        //     // scrolling="no"
-        //   />
-        <div>
-            <blockquote class="reddit-embed-bq h-3/6" data-embed-height="316"><a href="https://www.reddit.com/r/reactjs/comments/1jmemz3/why_is_routing_so_complicated_now/">Why is routing so complicated now?</a><br></br> by<a href="https://www.reddit.com/user/ScreamingArtichoke/">u/ScreamingArtichoke</a> in<a href="https://www.reddit.com/r/reactjs/">reactjs</a></blockquote><script  src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
-       </div>
+          <div>
+            <blockquote class="reddit-embed-bq" data-embed-height="740">Posts from the <a href="https://www.reddit.com/r/StartUpIndia/comments/1jnzotr/indian_vs_chinese_startup_ecosystem/">startupindia</a><br> </br> community on Reddit</blockquote>
+          </div>
         );
       case "linkedin":
         return (
@@ -90,7 +83,7 @@ const UniversalEmbed = () => {
         type="text"
         placeholder="Enter social media URL"
         class="border p-2 w-full"
-        onInput={(e) => setUrl(e.currentTarget.value)}
+        
       />
       <div class="mt-4">
         {url() ? renderEmbed() : <p>Enter a valid link to embed</p>}

@@ -7,7 +7,6 @@ const Auth = () => {
   return (
     <div class="w-full min-h-screen flex justify-center items-center bg-gray-300">
         <AuthForm isSignup={isSignup()} onToggle={toggleSignup
-
         } />
     </div>
   );
