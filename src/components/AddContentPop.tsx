@@ -6,6 +6,8 @@ import { Button } from "./ui/Button.jsx";
 import { createSignal } from "solid-js";
 
 import { isModalOpen, togglePopup } from "../actions/togglePopup.jsx"
+import { setTitle, setUrl } from "../hooks/common.js";
+import { addContent } from "../services/addContent.js";
 
 // interface AddContentPopProps {
 //   isOpen: boolean;
@@ -14,13 +16,6 @@ import { isModalOpen, togglePopup } from "../actions/togglePopup.jsx"
 
 const AddContentPop = () => {
    
-  const [url, setUrl] = createSignal<HTMLInputElement>()
-  const [title, setTitle] = createSignal<HTMLInputElement>()
-
-  const handleSubmit = () => {
-    console.log(url())
-    console.log(title())
-  }
 
   return (
     <>
@@ -51,7 +46,7 @@ const AddContentPop = () => {
                   text="Submit" 
                   size="md"
                   onClick={ () => {
-                    handleSubmit();
+                    addContent();
                     togglePopup()
                   }}
                 />

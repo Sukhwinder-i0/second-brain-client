@@ -1,6 +1,5 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Router } from "@solidjs/router";
 import App from "./App.jsx";
 import "./index.css";
 
@@ -11,7 +10,7 @@ if (!root) {
 }
 
 render(() => (
-  <Router>
+  <>
     <App />
-  </Router>
+  </>
 ), root);

@@ -40,7 +40,7 @@ export const Signin = () => {
             <a
               class="text-blue-800 cursor-pointer font-bold "
               onClick={() => {
-                navigate("/dashboard", { replace: true });
+                navigate("/signup", { replace: true });
               }}
             >
               Sign Up

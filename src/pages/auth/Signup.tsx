@@ -45,7 +45,7 @@ const navigate = useNavigate()
                 navigate("/signin", {replace: true})
               }}
             >
-              Sign Up
+              Sign In
             </a>
           </div>
         </div>

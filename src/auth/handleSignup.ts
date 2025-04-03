@@ -15,6 +15,9 @@ console.log("backend url:", backendUrl)
 
         console.log("Response:", response.data)
         alert("You have signed up")
+        window.location.href = "/signin"
+
+        
     
 
     } catch (error) {

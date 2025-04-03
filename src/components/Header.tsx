@@ -9,8 +9,8 @@ const Header = () => {
     <div class="bg-ghost-white pt-4 w-full flex justify-between p-6">
         <h2 class="font-bold text-3xl">All Notes</h2>
         <div class="gap-8 flex">
-            <Button variant="secondary" text="Share Brain" size="md" startIcon={<FiShare2/>}/>
             <Button variant="primary" text="Add Content" size="md" onClick={togglePopup} startIcon={<AiOutlinePlus/>}/>
+            <Button variant="secondary" text="Share Brain" size="md" startIcon={<FiShare2/>}/>
         </div>
     </div>
   )
