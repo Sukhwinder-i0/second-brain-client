@@ -13,7 +13,6 @@ const RedditPost = () => {
     <div class="w-full">
       <blockquote class="reddit-embed-bq" data-embed-height="500">
         <a href="https://www.reddit.com/r/programming/comments/xyz123/example_post_link/">
-          View Reddit Post
         </a>
       </blockquote>
     </div>

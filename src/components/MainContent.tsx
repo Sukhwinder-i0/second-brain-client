@@ -7,9 +7,6 @@ const MainContent = () => {
       <div class="space-y-4 flex w-full flex-wrap gap-16">
         <Card mediaIcon={<BsTwitter />} title="First Post" />
         <Card mediaIcon={<BsTwitter />} title="Second Post" />
-        <Card mediaIcon={<BsTwitter />} title="Third Post" />
-        <Card mediaIcon={<BsTwitter />} title="Fourth Post" />
-        <Card mediaIcon={<BsTwitter />} title="Fifth Post" />
       </div>
     </div>
   )

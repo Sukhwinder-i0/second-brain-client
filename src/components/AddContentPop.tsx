@@ -15,9 +15,11 @@ import { isModalOpen, togglePopup } from "../actions/togglePopup.jsx"
 const AddContentPop = () => {
    
   const [url, setUrl] = createSignal<HTMLInputElement>()
+  const [title, setTitle] = createSignal<HTMLInputElement>()
 
   const handleSubmit = () => {
     console.log(url())
+    console.log(title())
   }
 
   return (
@@ -35,6 +37,7 @@ const AddContentPop = () => {
               type="text" 
               placeholder="title" 
               label="Title" 
+              onInput={setTitle}
            />
            <InputBox 
               type="text" 
@@ -55,7 +58,8 @@ const AddContentPop = () => {
             </span>
         </div>
         </div>
-      </div>}
+      </div>
+      }
     </>
   );
 };

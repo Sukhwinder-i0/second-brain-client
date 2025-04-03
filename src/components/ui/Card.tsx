@@ -1,7 +1,7 @@
 import { AiOutlineDelete } from "solid-icons/ai";
 import { FiShare2 } from "solid-icons/fi";
 import { JSXElement, onMount } from "solid-js";
-import RedditPost from "../../Embedding/Reddit.jsx";
+import { YoutubePost } from "../../Embedding/Youtube.jsx";
 
 interface CardProps {
   mediaIcon: JSXElement;
@@ -24,7 +24,7 @@ const Card = (props: CardProps) => {
         </div>
       </div>
       <div class="w-full pt-6 ">
-        <RedditPost />
+        <YoutubePost shareLink={""} />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import { createSignal } from "solid-js"
 import AddContentPop from "../components/AddContentPop.jsx"
 import Header from "../components/Header.jsx"
 import MainContent from "../components/MainContent.jsx"

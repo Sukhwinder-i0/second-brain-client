@@ -1,18 +1,18 @@
-import { render } from "solid-js/web";
-import { Router, Route } from "@solidjs/router";
-import Auth from "./pages/Auth.jsx";
+import { Route, Router } from "@solidjs/router";
 import Dashboard from "./pages/Dashboard.jsx";
+import { Signup } from "./pages/auth/Signup.jsx";
+import { Signin } from "./pages/auth/Signin.jsx";
 
-// Layout Component
-export const App = () => (<></>);
-
-// Mount the Router
-render(
-  () => (
+const App = () => {
+  return (
+    <div>
     <Router>
-          <Route path="/" component={Dashboard} />
-          <Route path="/authentication" component={Auth} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/signin" component={Signin} />
     </Router>
-  ),
-  document.getElementById("root") as HTMLElement
-);
+    </div>
+  );
+};
+
+export default App;
