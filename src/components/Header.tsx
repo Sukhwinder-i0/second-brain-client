@@ -1,4 +1,4 @@
-import { TbBrain } from "solid-icons/tb"
+
 import { Button } from "./ui/Button.jsx"
 import { FiShare2 } from "solid-icons/fi"
 import { AiOutlinePlus } from "solid-icons/ai"
